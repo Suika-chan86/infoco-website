@@ -66,7 +66,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 INFOCO COMPUTER SCIENCE SOCIETY</span>
-        <span>本站内容由 InfoCo 社团维护 · 学校官方声明待授权后补充</span>
+        <span>本站内容由 InfoCo 社团维护</span>
         <a href="#top">BACK TO TOP ↑</a>
       </div>
     </footer>

@@ -47,8 +47,8 @@ export default function Home() {
           <div className="hero-copy">
             <div className="eyebrow"><span className="live-dot" /> COMPUTER SCIENCE SOCIETY · 2026</div>
             <h1 className="hero-title"><span>CODE</span><span>THE <em>CULTURE.</em></span></h1>
-            <p className="hero-lead">我们把代码写进校园，也把创意做成真实可玩的东西。</p>
-            <p className="hero-body">InfoCo 是由学习者、创作者和行动派共同组成的计算机社团。在这里，从第一行代码到第一个上线项目，都有人和你一起完成。</p>
+            <p className="hero-lead">用代码，编译想法。</p>
+            <p className="hero-body">InfoCo 是由学习者和创作者共同组成的计算机社团。在这里，从第一行代码到第一次上线，都不孤单。</p>
             <div className="hero-actions"><a className="btn btn-primary" href="/join">加入我们 <span>→</span></a><a className="btn btn-ghost" href="/projects">探索项目 <span>↗</span></a></div>
           </div>
           <div className="hero-console" aria-label="InfoCo 系统状态">
@@ -67,7 +67,7 @@ export default function Home() {
 
         <section className="home-statement section-pad">
           <div className="section-index">01 / ABOUT THE CLUB</div>
-          <div className="statement-grid"><h2>不是“学完再做”，<br />而是<em>边做边学。</em></h2><div><p>InfoCo 把编程学习、创意开发、协作实践和校园科技文化放在同一个空间里。你可以来听一场分享，也可以留下来和大家一起把作品发布出去。</p><a className="text-link" href="/about">进一步认识我们 →</a></div></div>
+          <div className="statement-grid"><h2>不是学完再做，<br />而是<em>边做边学。</em></h2><div><p>InfoCo 把编程学习、创意开发、协作实践和校园科技文化放在同一个空间里。你可以来听一场分享，也可以留下来和大家一起把作品发布出去。</p><a className="text-link" href="/about">进一步认识我们 →</a></div></div>
           <div className="stats-grid"><div><strong>04</strong><span>CORE TRACKS<br />核心方向</span></div><div><strong>05</strong><span>DIVISIONS<br />协作部门</span></div><div><strong>01</strong><span>GAME ONLINE<br />在线游戏</span></div><div><strong>∞</strong><span>IDEAS WELCOME<br />创意容量</span></div></div>
         </section>
 
@@ -77,10 +77,10 @@ export default function Home() {
           <figure className="event-map"><a href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer" aria-label="打开学术类社团完整地图"><Image src="/recruitment/academic-clubs-map.png" width={2560} height={1499} sizes="(max-width: 1080px) 100vw, 55vw" alt="学校学术类社团地图，InfoCo 计算机科学类编程社团位于 8 号展位" /></a><figcaption><span>ACADEMIC CLUBS MAP</span><strong>INFOCO · BOOTH 08</strong><small>点击查看学校宣传地图原图</small></figcaption></figure>
         </section>
 
-        <section className="section-pad project-showcase">
+        {/* <section className="section-pad project-showcase">
           <div className="section-heading"><div><span className="section-index">03 / FUTURE CONCEPTS</span><h2>先留下一些信号。<br />作品完成后再<em>正式上线。</em></h2></div><p>以下是方向性概念，不代表已经完成或发布；后续会替换为社团真实项目与游戏。</p></div>
           <div className="project-grid home-project-grid">{conceptProjects.map((project, index) => <article className={`project-card concept-card ${project.tone}`} key={project.name}><div className="project-card-top"><span>0{index + 1}</span><span className={`status-tag status-${project.status}`}>{project.status}</span></div><div className="project-icon" aria-hidden="true">{project.icon}</div><span className="card-kicker">FUTURE CONCEPT / 方向占位</span><h3>{project.name}</h3><p>{project.summary}</p><div className="tag-row">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="card-link">CONCEPT ONLY / 尚未发布</div></article>)}</div>
-        </section>
+        </section> */}
 
         <section className="track-section section-pad">
           <div className="section-heading"><div><span className="section-index light">04 / WHAT WE DO</span><h2>从好奇，到上线。</h2></div><p>四条方向不是四条孤立的路线，<br />它们会在每一次共创里交叉。</p></div>
@@ -88,7 +88,7 @@ export default function Home() {
         </section>
 
         <section className="visual-log section-pad">
-          <div className="section-heading"><div><span className="section-index">05 / ACTIVITY LOG</span><h2>现场，才是最好的<br /><em>更新日志。</em></h2></div><p>为保护社员隐私，真实活动照片将在取得公开授权后更新；当前版先保留影像位与活动语境。</p></div>
+          <div className="section-heading"><div><span className="section-index">05 / ACTIVITY LOG</span><h2>现场，才是最好的<br /><em>更新日志。</em></h2></div><p>为保护社员隐私，真实活动照片将在取得公开授权后更新</p></div>
           <div className="log-grid"><div className="log-frame log-a"><span>WORKSHOP / 01</span><b>&lt;CODE<br />TOGETHER&gt;</b><i /></div><div className="log-frame log-b"><span>HACK NIGHT / 02</span><b>BUILD<br />AFTER<br />DARK</b><i /></div><div className="log-frame log-c"><span>SHOW & TELL / 03</span><b>SHIP IT!</b><i /></div></div>
         </section>
         <section className="closing-cta"><span className="section-index">06 / NEXT MOVE</span><h2>你的第一个项目，<br />不必一个人开始。</h2><div><a className="btn btn-primary" href={openHouse.href}>了解百团大战 <span>→</span></a><a className="btn btn-ghost" href="/join">查看加入方式 <span>↗</span></a></div></section>
