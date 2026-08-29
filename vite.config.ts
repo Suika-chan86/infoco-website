@@ -8,10 +8,9 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 const localBindingConfig = {
   main: 'vinext/server/app-router-entry',
   compatibility_flags: ['nodejs_compat'],
-  routes: [
-    { pattern: 'infoco.club', custom_domain: true },
-    { pattern: 'www.infoco.club', custom_domain: true },
-  ],
+  // 未绑定自定义域名：默认使用免费的 *.workers.dev 地址。
+  // 绑定 infoco.club 时恢复下面的 routes 配置。
+  workers_dev: true,
   d1_databases: [],
   r2_buckets: [],
 };
