@@ -9,33 +9,6 @@ const tracks = [
   ['04', '校园科技', '让技术走出屏幕，成为校园文化的一部分。', 'LIVE'],
 ];
 
-const conceptProjects = [
-  {
-    name: 'CAMPUS INTELLIGENCE MESH',
-    status: '概念中',
-    summary: '校园智能协作网络，将活动、学习资源和项目需求组织成可组合的智能服务。',
-    tags: ['AI Orchestration', 'Campus Service', 'Concept'],
-    tone: 'acid',
-    icon: 'C//M',
-  },
-  {
-    name: 'SIGNAL FOUNDRY',
-    status: '规划中',
-    summary: '面向社团项目的自动化构建与发布工具链，让创意更快变成可分享的产品。',
-    tags: ['Automation', 'Toolchain', 'Planning'],
-    tone: 'blue',
-    icon: 'S//F',
-  },
-  {
-    name: 'NEON COMMONS',
-    status: '探索中',
-    summary: '结合计算机视觉、实时渲染和互动媒体的校园数字体验实验。',
-    tags: ['Computer Vision', 'Realtime', 'Exploration'],
-    tone: 'orange',
-    icon: 'N//C',
-  },
-];
-
 const openHouse = events.find((event) => event.slug === 'new-member-open-house')!;
 
 export default function Home() {
@@ -73,7 +46,7 @@ export default function Home() {
 
         <section className="home-event section-pad" id="recruitment">
           <div className="section-index light">02 / CURRENT SIGNAL</div>
-          <div className="event-feature-copy"><span className="status-pill">● 9.2 百团大战 / SCHEDULED</span><h2>{openHouse.title}</h2><p>来 8 号展位认识 InfoCo、聊聊你想做的项目，也可以现场挑战“快问快答”。游戏仅在活动当天 09:00–20:00 开放，兑奖由现场社员协助完成。</p><div className="feature-meta"><div><span>DATE / TIME</span><strong>2026.09.02 · 09:00–20:00</strong></div><div><span>LOCATION</span><strong>西交利物浦大学南校区<br />学术类社团区 8 号展位</strong></div><div><span>ENTRY</span><strong>现场免费参与</strong></div></div><div className="event-actions"><a className="btn btn-dark" href={openHouse.href}>查看活动详情 <span>→</span></a><a className="map-link" href="/games/quick-quiz">进入限时挑战 ↗</a><a className="map-link" href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer">查看完整地图 ↗</a></div></div>
+          <div className="event-feature-copy"><span className="status-pill">● 9.2 百团大战 / SCHEDULED</span><h2>{openHouse.title}</h2><p>来 8 号展位认识 InfoCo、聊聊你想做的项目，也可以现场挑战“快问快答”。游戏仅在活动当天 09:00–20:00 开放，兑奖由现场社员协助完成。</p><div className="feature-meta"><div><span>DATE / TIME</span><strong>2026.09.02 · 09:00–20:00</strong></div><div><span>LOCATION</span><strong>西交利物浦大学南校区<br />学术类社团区 8 号展位</strong></div><div><span>ENTRY</span><strong>现场免费参与</strong></div></div><div className="event-actions"><a className="btn btn-dark" href={openHouse.href}>查看活动详情 <span>→</span></a><a className="map-link" href="/games/quick-quiz">进入快问快答 ↗</a><a className="map-link" href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer">查看完整地图 ↗</a></div></div>
           <figure className="event-map"><a href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer" aria-label="打开学术类社团完整地图"><Image src="/recruitment/academic-clubs-map.png" width={2560} height={1499} sizes="(max-width: 1080px) 100vw, 55vw" alt="学校学术类社团地图，InfoCo 计算机科学类编程社团位于 8 号展位" /></a><figcaption><span>ACADEMIC CLUBS MAP</span><strong>INFOCO · BOOTH 08</strong><small>点击查看学校宣传地图原图</small></figcaption></figure>
         </section>
 
@@ -83,15 +56,15 @@ export default function Home() {
         </section> */}
 
         <section className="track-section section-pad">
-          <div className="section-heading"><div><span className="section-index light">04 / WHAT WE DO</span><h2>从好奇，到上线。</h2></div><p>四条方向不是四条孤立的路线，<br />它们会在每一次共创里交叉。</p></div>
+          <div className="section-heading"><div><span className="section-index light">03 / WHAT WE DO</span><h2>从好奇，到上线。</h2></div><p>四条方向不是四条孤立的路线，<br />它们会在每一次共创里交叉。</p></div>
           <div className="track-grid">{tracks.map(([index, name, copy, icon]) => <div className="track-card" key={index}><span>{index}</span><b>{icon}</b><h3>{name}</h3><p>{copy}</p></div>)}</div>
         </section>
 
         <section className="visual-log section-pad">
-          <div className="section-heading"><div><span className="section-index">05 / ACTIVITY LOG</span><h2>现场，才是最好的<br /><em>更新日志。</em></h2></div><p>为保护社员隐私，真实活动照片将在取得公开授权后更新</p></div>
+          <div className="section-heading"><div><span className="section-index">04 / ACTIVITY LOG</span><h2>现场，才是最好的<br /><em>更新日志。</em></h2></div><p>为保护社员隐私，真实活动照片整理中，取得公开授权后发布。</p></div>
           <div className="log-grid"><div className="log-frame log-a"><span>WORKSHOP / 01</span><b>&lt;CODE<br />TOGETHER&gt;</b><i /></div><div className="log-frame log-b"><span>HACK NIGHT / 02</span><b>BUILD<br />AFTER<br />DARK</b><i /></div><div className="log-frame log-c"><span>SHOW & TELL / 03</span><b>SHIP IT!</b><i /></div></div>
         </section>
-        <section className="closing-cta"><span className="section-index">06 / NEXT MOVE</span><h2>你的第一个项目，<br />不必一个人开始。</h2><div><a className="btn btn-primary" href={openHouse.href}>了解百团大战 <span>→</span></a><a className="btn btn-ghost" href="/join">查看加入方式 <span>↗</span></a></div></section>
+        <section className="closing-cta"><span className="section-index">05 / NEXT MOVE</span><h2>你的第一个项目，<br />不必一个人开始。</h2><div><a className="btn btn-primary" href={openHouse.href}>了解百团大战 <span>→</span></a><a className="btn btn-ghost" href="/join">查看加入方式 <span>↗</span></a></div></section>
       </main>
     </Shell>
   );

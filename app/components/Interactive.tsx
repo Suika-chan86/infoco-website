@@ -31,7 +31,7 @@ export function EventExplorer({ events }: { events: EventRecord[] }) {
         {filtered.length ? filtered.map((event) => (
           <a href={event.href ?? getEventHref(event.slug)} className={`event-card ${event.tone}`} id={event.slug} key={event.slug}>
             <div className="event-visual"><span>{event.eyebrow}</span><b>{eventGlyphs[event.type]}</b><i /></div>
-            <div className="event-card-body"><span className="card-kicker">{event.status === 'upcoming' ? 'UPCOMING' : 'ARCHIVE'} · {event.type}</span><h2>{event.title}</h2><p>{event.summary}</p><dl><div><dt>DATE</dt><dd>{event.date}</dd></div><div><dt>PLACE</dt><dd>{event.place}</dd></div></dl><span className="text-link">{event.href?.startsWith('/events#') ? '信息待确认 · 持续更新' : '查看活动详情 →'}</span></div>
+            <div className="event-card-body"><span className="card-kicker">{event.status === 'upcoming' ? 'UPCOMING' : 'ARCHIVE'} · {event.type}</span><h2>{event.title}</h2><p>{event.summary}</p><dl><div><dt>DATE</dt><dd>{event.date}</dd></div><div><dt>PLACE</dt><dd>{event.place}</dd></div></dl><span className="text-link">{event.href?.startsWith('/events#') ? '信息整理中' : '查看活动详情 →'}</span></div>
           </a>
         )) : <div className="empty-state"><span>NO SIGNAL</span><h2>这个筛选下暂时没有活动</h2><p>换一个类别，或者关注后续公开通知。</p></div>}
       </div>
@@ -58,7 +58,7 @@ const faqJoin: Array<[string, string]> = [
   ['我完全没有编程基础，可以加入吗？', '可以。InfoCo 既欢迎已经在做项目的人，也欢迎还没写过第一行代码的人。学习路径会从基础开始，真正重要的是好奇心和愿意动手。'],
   ['只能做编程相关的事情吗？', '不是。游戏与科技项目同样需要设计、写作、视觉、运营与组织能力。你可以先从感兴趣的角色进入，再逐步拓展。'],
   ['加入后需要投入多少时间？', '不同项目节奏不同。常规活动可以按兴趣参与；如果加入项目组，建议提前和团队约定稳定、可持续的投入。'],
-  ['现在怎样了解并加入？', '9 月 2 日可以前往百团大战学术类社团区 8 号展位，与社团成员交流并了解加入方式。其他公开入口确认后会同步更新到官网。'],
+  ['现在怎样了解并加入？', '9 月 2 日可以前往百团大战学术类社团区 8 号展位，与社团成员交流并了解加入方式。其他公开入口整理中，确认后同步到官网。'],
 ];
 
 export function JoinFAQ() { return <FAQ items={faqJoin} />; }

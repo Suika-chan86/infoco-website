@@ -54,14 +54,14 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-main">
-        <div><Logo /><p>把好奇心编译成作品。</p></div>
+        <div><Logo /><p>用代码，编译想法。</p></div>
         <div className="footer-nav">
           {navItems.slice(1).map(([cn, , href]) => <a href={href} key={href}>{cn}</a>)}
         </div>
         <div className="footer-contact">
           <span>PUBLIC CHANNEL</span>
           <strong>infoco.club</strong>
-          <p>公开邮箱与社交媒体待社团确认后更新</p>
+          <p>公开邮箱与社交媒体信息整理中</p>
         </div>
       </div>
       <div className="footer-bottom">

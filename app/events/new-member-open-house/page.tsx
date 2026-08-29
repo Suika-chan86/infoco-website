@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'InfoCo 2026 百团大战 · 新成员开放日：9 月 2 日 09:00–20:00，西交利物浦大学南校区学术类社团区 8 号展位。',
   openGraph: {
     title: '百团大战 · 新成员开放日 — InfoCo',
-    description: '到 8 号展位认识 InfoCo，并参加现场限时问答挑战。',
+    description: '到 8 号展位认识 InfoCo，并参加现场“快问快答”挑战。',
     images: [],
   },
   twitter: {
@@ -26,9 +26,9 @@ export default function NewMemberOpenHousePage() {
           <div className="detail-breadcrumb"><a href="/events">活动 EVENTS</a><span>/</span><span>OPEN HOUSE</span></div>
           <span className="status-pill">SCHEDULED · 百团大战 · 新成员开放日</span>
           <h1>New Member<br />Open House.</h1>
-          <p>到 8 号展位认识 InfoCo、聊聊你想做的项目，也可以现场参加“快问快答”限时挑战。</p>
+          <p>到 8 号展位认识 InfoCo、聊聊你想做的项目，也可以现场参加“快问快答”挑战。</p>
           <div className="detail-actions">
-            <a className="btn btn-primary" href="/games/quick-quiz">进入限时挑战 →</a>
+            <a className="btn btn-primary" href="/games/quick-quiz">进入快问快答 →</a>
             <a className="btn btn-ghost" href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer">查看活动地图 ↗</a>
             <ShareButton />
           </div>
