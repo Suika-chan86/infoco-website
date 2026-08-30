@@ -34,7 +34,7 @@ export function SiteHeader() {
       <nav className="desktop-nav" aria-label="主导航">
         {navItems.map(([cn, en, href]) => {
           const active = href === '/' ? pathname === '/' : pathname.startsWith(href);
-          return <a href={href} key={href} className={active ? 'active' : ''}><span>{cn}</span><small>{en}</small></a>;
+          return <a href={href} key={href} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined}><span>{cn}</span><small>{en}</small></a>;
         })}
       </nav>
       <a className="header-join" href="/join">JOIN <span aria-hidden="true">↗</span></a>
@@ -42,9 +42,10 @@ export function SiteHeader() {
         <span /><span />
       </button>
       <nav id="mobile-nav" className={`mobile-nav ${open ? 'open' : ''}`} aria-label="移动端主导航">
-        {navItems.map(([cn, en, href], index) => (
-          <a href={href} key={href}><b>0{index + 1}</b><span>{cn}<small>{en}</small></span><i>↗</i></a>
-        ))}
+        {navItems.map(([cn, en, href], index) => {
+          const active = href === '/' ? pathname === '/' : pathname.startsWith(href);
+          return <a href={href} key={href} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined}><b>0{index + 1}</b><span>{cn}<small>{en}</small></span><i>↗</i></a>;
+        })}
       </nav>
     </header>
   );
@@ -61,7 +62,7 @@ export function SiteFooter() {
         <div className="footer-contact">
           <span>PUBLIC CHANNEL</span>
           <strong>infoco.club</strong>
-          <p>公开邮箱与社交媒体信息整理中</p>
+          <p>最新活动与招新信息以官网为准</p>
         </div>
       </div>
       <div className="footer-bottom">
@@ -80,8 +81,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
 export function PageIntro({ index, label, title, copy, accent = 'acid' }: { index: string; label: string; title: string; copy: string; accent?: 'acid' | 'blue' | 'orange' }) {
   return (
     <section className={`page-intro ${accent}`}>
-      <div className="page-intro-meta"><span>{index}</span><span>{label}</span></div>
-      <h1>{title}</h1>
+      <div className="page-intro-title">
+        <div className="page-intro-meta"><span>{index}</span><span>{label}</span></div>
+        <h1>{title}</h1>
+      </div>
       <p>{copy}</p>
       <div className="page-intro-cross" aria-hidden="true">+</div>
     </section>

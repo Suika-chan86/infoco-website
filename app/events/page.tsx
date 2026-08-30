@@ -5,5 +5,5 @@ import { events } from '../content';
 
 export const metadata: Metadata = { title: '活动', description: '查看 InfoCo 即将举行的活动与往期记录。' };
 export default function EventsPage() {
-  return <Shell><main id="top"><PageIntro index="02" label="EVENTS / 活动" title="每一次见面，都是一次新的编译。" copy="从入门工作坊到 48 小时 Hackathon：查看下一场活动，也可以回到往期记录，看看我们怎样把一个想法变成现场。" accent="orange" /><section className="events-section section-pad"><EventExplorer events={events} /></section><section className="events-note"><div><span>EXTERNAL REGISTRATION</span><h2>报名与签到，连接成熟工具。</h2></div><p>第一版不收集个人报名信息。活动开放后，本页会清晰标注飞书表单或学校系统入口；活动结束后，同一链接会转为回顾页。</p></section></main></Shell>;
+  return <Shell><main id="top"><PageIntro index="02" label="EVENTS / 活动" title="来相聚，点亮现场。" copy="课程、比赛、Hackathon 与社团会议日程。" accent="orange" /><section className="events-section section-pad"><EventExplorer events={events} /></section><section className="events-note"><div><span>EVENT ACCESS</span><h2>报名与回顾</h2></div><p>开放报名后显示官方入口；结束后保留活动回顾。</p></section></main></Shell>;
 }

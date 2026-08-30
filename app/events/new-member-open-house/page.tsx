@@ -26,7 +26,7 @@ export default function NewMemberOpenHousePage() {
           <div className="detail-breadcrumb"><a href="/events">活动 EVENTS</a><span>/</span><span>OPEN HOUSE</span></div>
           <span className="status-pill">SCHEDULED · 百团大战 · 新成员开放日</span>
           <h1>New Member<br />Open House.</h1>
-          <p>到 8 号展位认识 InfoCo、聊聊你想做的项目，也可以现场参加“快问快答”挑战。</p>
+          <p>到 8 号展位了解 InfoCo，并参加“快问快答”挑战。</p>
           <div className="detail-actions">
             <a className="btn btn-primary" href="/games/quick-quiz">进入快问快答 →</a>
             <a className="btn btn-ghost" href="/recruitment/academic-clubs-map.png" target="_blank" rel="noreferrer">查看活动地图 ↗</a>
@@ -43,14 +43,14 @@ export default function NewMemberOpenHousePage() {
           </aside>
           <article>
             <span className="section-index">ABOUT THIS EVENT</span>
-            <h2>来现场，认识一起做东西的人。</h2>
-            <p>新成员开放日是认识 InfoCo 的现场入口。你可以了解社团的四条核心方向，与项目成员面对面交流，也可以聊聊自己想学习、尝试或共同完成的项目。</p>
+            <h2>现场内容</h2>
+            <p>展示四条核心方向与在研项目；提供课程、项目与加入咨询。</p>
             <h3>现场体验</h3>
-            <p>“快问快答”仅在活动当天 09:00–20:00 开放。完成挑战后，兑奖由现场社员协助完成；线上页面不会收集兑奖信息。</p>
+            <p>“快问快答”仅在活动当天 09:00–20:00 开放。完成挑战后，请到展位由现场社员确认并兑奖。</p>
             <div className="detail-callout">
               <span>WHERE TO FIND US</span>
               <strong>学术类社团区 · 8 号展位</strong>
-              <p>可点击页面上方“查看活动地图”打开学校宣传地图原图。</p>
+              <p>点击上方“查看活动地图”，即可打开学校宣传地图原图。</p>
             </div>
           </article>
         </section>

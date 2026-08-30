@@ -4,15 +4,15 @@ import { PageIntro, Shell } from '../components/SiteChrome';
 import { events } from '../content';
 
 export const metadata: Metadata = { title: '加入我们', description: '了解 InfoCo 招新方向、流程与 9 月 2 日百团大战现场信息。' };
-const roles = [['</>', '我想学会编程', '从基础课程开始，在真实项目里把知识连起来。'], ['MAKE', '我想做出作品', '把游戏、网站、工具或研究想法推进到可以分享。'], ['PIXEL', '我会设计或表达', '视觉、交互、文案和叙事都是科技项目的重要部分。'], ['TEAM', '我喜欢组织与协作', '活动策划、资源协调和对外连接同样不可或缺。']];
+const roles = [['</>', '学习编程', '基础社课与项目实践。'], ['MAKE', '做出作品', '游戏、网站、工具与研究项目。'], ['PIXEL', '设计与表达', '界面、视觉、文案与叙事。'], ['TEAM', '组织与协作', '活动策划、资源协调与外联。']];
 const openHouse = events.find((event) => event.slug === 'new-member-open-house')!;
 
 export default function JoinPage() {
-  return <Shell><main id="top"><PageIntro index="05" label="JOIN US / 加入我们" title="不需要准备好，才可以开始。" copy="无论你是第一次接触编程，还是已经有想做的项目，InfoCo 都希望给你一个清楚、友好、真正能开始行动的入口。" accent="orange" />
-    <section className="join-status section-pad"><div><span className="status-pill">● 9.2 百团大战 / SCHEDULED</span><h2>来现场，认识并加入 InfoCo。</h2><p>{openHouse.date}，我们会在{openHouse.place}。你可以现场了解社团方向、活动计划和加入方式。</p></div><a className="btn btn-dark" href={openHouse.href}>查看活动详情与地图 →</a></section>
-    <section className="fit-section section-pad"><div className="section-heading"><div><span className="section-index">WHO FITS HERE</span><h2>找到你的起点</h2></div><p>不设“标准社员”模板。<br />从你真正感兴趣的事情开始。</p></div><div className="role-grid">{roles.map(([icon, title, copy]) => <article key={title}><b>{icon}</b><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
-    <section className="join-flow section-pad"><div className="section-heading"><div><span className="section-index light">RECRUITMENT FLOW</span><h2>加入流程</h2></div><p>9 月 2 日可先到百团大战现场了解；其他公开入口整理中，确认后同步到官网。</p></div><div className="flow-grid">{[['01', '查看活动信息', '先确认百团大战的时间、地点与现场安排。'], ['02', '到 8 号展位', '与社团成员交流，了解活动方向和适合自己的参与方式。'], ['03', '确认加入意向', '具体入口与后续安排以社团现场和官网更新为准。'], ['04', '开始共创', '进入学习路径、活动团队或项目小组，完成第一次协作。']].map(([index, title, copy]) => <div key={index}><span>{index}</span><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
-    <section className="join-faq section-pad"><div className="section-heading"><div><span className="section-index">FAQ / 常见问题</span><h2>没有基础，也完全没问题。</h2></div></div><JoinFAQ /></section>
-    <section className="public-channel" id="public-channel"><span>MEET US / 现场见</span><h2>9 月 2 日，来 8 号展位。</h2><p>目前没有已确认可公开使用的社交媒体、招新群或邮箱。百团大战活动页会提供已确认的现场信息，其他公开入口整理中，确认后同步到官网。</p><div className="public-channel-actions"><a className="btn btn-primary" href={openHouse.href}>了解百团大战 →</a><a className="btn btn-ghost" href="/events">查看所有活动 ↗</a></div></section>
+  return <Shell><main id="top"><PageIntro index="05" label="JOIN US / 加入我们" title="带热爱，一起出发。" copy="零基础可加入；有项目经验可直接参与开发。" accent="orange" />
+    <section className="join-status section-pad"><div><span className="status-pill">● SCHEDULED · 9.2 百团大战</span><h2>来现场，认识 InfoCo。</h2><p>{openHouse.date} · {openHouse.place}。现场提供方向、项目与加入咨询。</p></div><a className="btn btn-dark" href={openHouse.href}>查看活动与地图 →</a></section>
+    <section className="fit-section section-pad"><div className="section-heading"><div><span className="section-index">WHO FITS HERE</span><h2>参与方向</h2></div><p>编程、设计、内容、运营均可加入。</p></div><div className="role-grid">{roles.map(([icon, title, copy]) => <article key={title}><b>{icon}</b><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+    <section className="join-flow section-pad"><div className="section-heading"><div><span className="section-index light">RECRUITMENT FLOW</span><h2>加入流程</h2></div><p>现场了解方向，确认后加入项目或活动组。</p></div><div className="flow-grid">{[['01', '查看活动', '确认时间、地点与安排。'], ['02', '来到展位', '了解社课、项目与部门。'], ['03', '选择方向', '选择学习或协作方向。'], ['04', '开始共创', '加入小组，完成首项任务。']].map(([index, title, copy]) => <div key={index}><span>{index}</span><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
+    <section className="join-faq section-pad"><div className="section-heading"><div><span className="section-index">FAQ / 常见问题</span><h2>加入须知</h2></div></div><JoinFAQ /></section>
+    <section className="public-channel" id="public-channel"><span>MEET US / 现场见</span><h2>9 月 2 日，来 8 号展位。</h2><p>招新入口与联系方式以官网更新为准。</p><div className="public-channel-actions"><a className="btn btn-primary" href={openHouse.href}>查看百团大战 →</a><a className="btn btn-ghost" href="/events">查看全部活动 ↗</a></div></section>
   </main></Shell>;
 }

@@ -31,9 +31,9 @@ export function EventExplorer({ events }: { events: EventRecord[] }) {
         {filtered.length ? filtered.map((event) => (
           <a href={event.href ?? getEventHref(event.slug)} className={`event-card ${event.tone}`} id={event.slug} key={event.slug}>
             <div className="event-visual"><span>{event.eyebrow}</span><b>{eventGlyphs[event.type]}</b><i /></div>
-            <div className="event-card-body"><span className="card-kicker">{event.status === 'upcoming' ? 'UPCOMING' : 'ARCHIVE'} · {event.type}</span><h2>{event.title}</h2><p>{event.summary}</p><dl><div><dt>DATE</dt><dd>{event.date}</dd></div><div><dt>PLACE</dt><dd>{event.place}</dd></div></dl><span className="text-link">{event.href?.startsWith('/events#') ? '信息整理中' : '查看活动详情 →'}</span></div>
+            <div className="event-card-body"><span className="card-kicker">{event.status === 'upcoming' ? 'UPCOMING' : 'ARCHIVE'} · {event.type}</span><h2>{event.title}</h2><p>{event.summary}</p><dl><div><dt>DATE</dt><dd>{event.date}</dd></div><div><dt>PLACE</dt><dd>{event.place}</dd></div></dl><span className="text-link">{event.href?.startsWith('/events#') ? '日程待确认' : '查看活动 →'}</span></div>
           </a>
-        )) : <div className="empty-state"><span>NO SIGNAL</span><h2>这个筛选下暂时没有活动</h2><p>换一个类别，或者关注后续公开通知。</p></div>}
+        )) : <div className="empty-state"><span>NO SIGNAL</span><h2>当前分类暂无活动</h2><p>请选择其他分类。</p></div>}
       </div>
     </div>
   );
@@ -55,10 +55,10 @@ export function ShareButton({ label = '复制页面链接' }: { label?: string }
 }
 
 const faqJoin: Array<[string, string]> = [
-  ['我完全没有编程基础，可以加入吗？', '可以。InfoCo 既欢迎已经在做项目的人，也欢迎还没写过第一行代码的人。学习路径会从基础开始，真正重要的是好奇心和愿意动手。'],
-  ['只能做编程相关的事情吗？', '不是。游戏与科技项目同样需要设计、写作、视觉、运营与组织能力。你可以先从感兴趣的角色进入，再逐步拓展。'],
-  ['加入后需要投入多少时间？', '不同项目节奏不同。常规活动可以按兴趣参与；如果加入项目组，建议提前和团队约定稳定、可持续的投入。'],
-  ['现在怎样了解并加入？', '9 月 2 日可以前往百团大战学术类社团区 8 号展位，与社团成员交流并了解加入方式。其他公开入口整理中，确认后同步到官网。'],
+  ['没有编程基础，可以加入吗？', '可以。社课覆盖基础内容，项目组接受零基础成员。'],
+  ['只能参与编程项目吗？', '不限编程。设计、写作、视觉、运营与组织均可参与。'],
+  ['需要投入多少时间？', '常规活动按兴趣参加；项目组按约定投入固定时间。'],
+  ['现在如何加入？', '9 月 2 日前往百团大战学术类社团区 8 号展位；最新入口同步官网。'],
 ];
 
 export function JoinFAQ() { return <FAQ items={faqJoin} />; }
@@ -151,10 +151,10 @@ export function SignalRouteGame() {
             );
           })}
         </div>
-        {phase === 'intro' ? <div className="game-overlay"><span>普通体验模式 · 三段链路挑战</span><h2>信号路径已中断</h2><p>旋转线路模块，让数据包从 TX 信号源抵达 RX 服务器。三关难度逐步提升，每一步都会影响最终得分。</p><button onClick={() => loadLevel(0, true)}>接入系统 →</button></div> : null}
-        {phase === 'cleared' ? <div className="game-overlay success" aria-live="polite"><span>UPLINK STABLE</span><h2>第 {level.id} 段链路恢复</h2><p>剩余 {time} 秒，使用 {moves} 次旋转。下一段线路包含更多干扰节点。</p><button onClick={() => loadLevel(levelIndex + 1)}>进入下一段 →</button></div> : null}
-        {phase === 'lost' ? <div className="game-overlay fail" aria-live="polite"><span>CONNECTION TIMEOUT</span><h2>数据包未能送达</h2><p>当前完成 {moves} 次旋转。线路布局仍然有解，可以立即重新尝试这一关。</p><button onClick={() => loadLevel(levelIndex)}>重新路由 ↻</button></div> : null}
-        {phase === 'complete' ? <div className="game-overlay success" aria-live="polite"><span>ALL SYSTEMS ONLINE</span><h2>校园链路全部恢复</h2><p>最终得分 {score}。你让三个数据包安全抵达了目标服务器。</p><button onClick={() => loadLevel(0, true)}>再次挑战 ↻</button></div> : null}
+        {phase === 'intro' ? <div className="game-overlay"><span>NORMAL MODE · 三段链路</span><h2>信号路径已中断</h2><p>旋转线路，连接 TX 与 RX。用更少步骤完成三关。</p><button onClick={() => loadLevel(0, true)}>接入系统 →</button></div> : null}
+        {phase === 'cleared' ? <div className="game-overlay success" aria-live="polite"><span>UPLINK STABLE</span><h2>第 {level.id} 段链路已恢复</h2><p>剩余 {time} 秒，完成 {moves} 次旋转。下一段会出现更多干扰节点。</p><button onClick={() => loadLevel(levelIndex + 1)}>进入下一段 →</button></div> : null}
+        {phase === 'lost' ? <div className="game-overlay fail" aria-live="polite"><span>CONNECTION TIMEOUT</span><h2>数据包未能送达</h2><p>已完成 {moves} 次旋转。线路仍然有解，可以立即重试。</p><button onClick={() => loadLevel(levelIndex)}>重新路由 ↻</button></div> : null}
+        {phase === 'complete' ? <div className="game-overlay success" aria-live="polite"><span>ALL SYSTEMS ONLINE</span><h2>校园链路已全部恢复</h2><p>最终得分 {score}。三段链路均已接通。</p><button onClick={() => loadLevel(0, true)}>再次挑战 ↻</button></div> : null}
       </div>
       <div className="game-footer"><span>INPUT: POINTER / TOUCH / KEYBOARD</span><span>NETWORK: NOT REQUIRED</span><span>PRIZE CODE: DISABLED</span></div>
     </div>

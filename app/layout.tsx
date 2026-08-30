@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://infoco.club'),
   title: { default: 'InfoCo — Code the Culture', template: '%s — InfoCo' },
-  description: 'InfoCo 计算机社团：用代码，编译想法。一起学习、创造、发布与分享。',
+  description: 'InfoCo 西浦计算机社团：社课、项目、游戏与校园科技活动。',
   applicationName: 'InfoCo',
   alternates: { canonical: '/' },
   openGraph: {
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     locale: 'zh_CN',
     siteName: 'InfoCo',
     title: 'InfoCo — Code the Culture',
-    description: '用代码，编译想法。InfoCo 计算机社团，一起学习、创造、发布与分享。',
+    description: 'InfoCo 西浦计算机社团：社课、项目、游戏与校园科技活动。',
     url: 'https://infoco.club',
     images: [{ url: '/og.png', width: 1731, height: 909, alt: 'InfoCo — Code the Culture' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'InfoCo — Code the Culture',
-    description: '用代码，编译想法。InfoCo 计算机社团，一起学习、创造、发布与分享。',
+    description: 'InfoCo 西浦计算机社团：社课、项目、游戏与校园科技活动。',
     images: ['/og.png'],
   },
 };
