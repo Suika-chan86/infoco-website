@@ -55,10 +55,15 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(18px);
 }
 .brand { display: inline-flex; align-items: center; gap: 12px; width: fit-content; font-size: 21px; font-weight: 800; letter-spacing: -0.05em; }
-.brand-mark { width: 25px; height: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; transform: rotate(45deg); }
-.brand-mark i { background: var(--acid); }
-.brand-mark i:nth-child(2) { opacity: .35; }
-.brand-mark i:nth-child(3) { opacity: .65; }
+.brand-mark {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  background: var(--acid);
+  -webkit-mask: url('/infoco-logo.svg') center / contain no-repeat;
+  mask: url('/infoco-logo.svg') center / contain no-repeat;
+}
 .desktop-nav { display: flex; align-items: stretch; height: 82px; }
 .desktop-nav a { min-width: 96px; padding: 22px 16px 0; text-align: center; color: var(--muted); border-left: 1px solid transparent; border-right: 1px solid transparent; transition: .2s ease; }
 .desktop-nav a span { display: block; font-size: 13px; font-weight: 600; }
@@ -100,6 +105,33 @@ h1 em { color: var(--acid); font-style: normal; }
 .console-status { color: var(--acid); }
 .console-body { position: relative; min-height: 390px; display: grid; place-items: center; padding: 50px 34px 82px; overflow: hidden; background: radial-gradient(circle at 50% 35%, rgba(135,169,255,.12), transparent 38%); }
 .console-body::before { content: '01001001 01001110 01000110 01001111'; position: absolute; top: 18px; right: -24px; color: rgba(255,255,255,.06); font: 9px/1 var(--font-mono); letter-spacing: .18em; transform: rotate(90deg); transform-origin: center; }
+.hero-emblem {
+  position: relative;
+  width: clamp(176px, 19vw, 236px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(200, 255, 82, .3);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 255, 82, .11), transparent 68%);
+  box-shadow: 0 0 0 18px rgba(200, 255, 82, .025), 0 0 70px rgba(200, 255, 82, .1);
+}
+.hero-emblem::before,
+.hero-emblem::after {
+  content: '';
+  position: absolute;
+  background: rgba(200, 255, 82, .28);
+}
+.hero-emblem::before { width: calc(100% + 48px); height: 1px; }
+.hero-emblem::after { width: 1px; height: calc(100% + 48px); }
+.hero-emblem span {
+  width: 76%;
+  height: 76%;
+  background: var(--acid);
+  -webkit-mask: url('/infoco-logo.svg') center / contain no-repeat;
+  mask: url('/infoco-logo.svg') center / contain no-repeat;
+  filter: drop-shadow(0 0 18px rgba(200, 255, 82, .22));
+}
 .pixel-face { position: relative; width: 168px; height: 154px; background: var(--blue); clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%); box-shadow: inset 0 -15px rgba(0,0,0,.14); }
 .pixel-face::after { content: ''; position: absolute; inset: 18px; border: 2px solid var(--line-dark-strong); }
 .pixel-face .ear { position: absolute; top: -24px; width: 46px; height: 52px; background: var(--blue); }
@@ -191,6 +223,8 @@ button { color: inherit; font: inherit; }
 .site-footer { color: var(--paper); background: var(--panel); border-top: 1px solid var(--line); }
 .footer-main { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: 60px; padding: 68px clamp(22px, 6vw, 96px); }
 .footer-main > div:first-child p { margin: 20px 0 0; color: var(--muted); font-size: 15px; }
+.footer-brand .brand { gap: 16px; font-size: 28px; }
+.footer-brand .brand-mark { width: 48px; height: 48px; flex-basis: 48px; }
 .footer-nav { display: grid; grid-template-columns: 1fr 1fr; align-content: start; gap: 13px 26px; }
 .footer-nav a { color: var(--text-hi); font-size: 13px; }
 .footer-nav a:hover { color: var(--acid); }
@@ -707,7 +741,7 @@ a:focus-visible, button:focus-visible {
   box-shadow: 0 10px 35px rgba(0, 0, 0, .16);
 }
 .brand { gap: 11px; font-size: 22px; }
-.brand-mark { width: 24px; height: 24px; }
+.brand-mark { width: 30px; height: 30px; }
 .desktop-nav { height: 74px; align-items: center; gap: 3px; }
 .desktop-nav a {
   min-width: 92px;
@@ -894,6 +928,9 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 680px) {
   .site-header { height: 68px; padding-inline: 18px; }
   .brand { font-size: 21px; }
+  .brand-mark { width: 28px; height: 28px; flex-basis: 28px; }
+  .footer-brand .brand-mark { width: 44px; height: 44px; flex-basis: 44px; }
+  .hero-emblem { width: min(58vw, 220px); }
   .menu-toggle { width: 44px; height: 44px; border-radius: var(--radius-sm); }
   .mobile-nav { padding: 12px; gap: 6px; }
   .mobile-nav a { border-radius: var(--radius-sm); }

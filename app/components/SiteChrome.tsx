@@ -17,7 +17,7 @@ export const navItems = [
 export function Logo() {
   return (
     <a className="brand" href="/" aria-label="InfoCo 首页">
-      <span className="brand-mark" aria-hidden="true"><i /><i /><i /><i /></span>
+      <span className="brand-mark" aria-hidden="true" />
       <span>InfoCo</span>
     </a>
   );
@@ -55,7 +55,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-main">
-        <div><Logo /><p>用代码，编译想法。</p></div>
+        <div className="footer-brand"><Logo /><p>用代码，编译想法。</p></div>
         <div className="footer-nav">
           {navItems.slice(1).map(([cn, , href]) => <a href={href} key={href}>{cn}</a>)}
         </div>

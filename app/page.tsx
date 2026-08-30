@@ -21,13 +21,13 @@ export default function Home() {
             <div className="eyebrow"><span className="live-dot" /> COMPUTER SCIENCE SOCIETY · 2026</div>
             <h1 className="hero-title"><span>CODE</span><span>THE <em>CULTURE.</em></span></h1>
             <p className="hero-lead">用代码，编译想法。</p>
-            <p className="hero-body">新手从基础入门，有经验的成员直接参与项目。</p>
+            <p className="hero-body">从第一行代码，到第一个作品。</p>
             <div className="hero-actions"><a className="btn btn-primary" href="/join">加入 InfoCo <span>→</span></a><a className="btn btn-ghost" href="/projects">查看项目 <span>↗</span></a></div>
           </div>
           <div className="hero-console" aria-label="InfoCo 系统状态">
             <div className="console-top"><span>INFOCO://MISSION_CONTROL</span><span className="console-status">● ONLINE</span></div>
             <div className="console-body">
-              <div className="pixel-face" aria-hidden="true"><span className="ear left" /><span className="ear right" /><span className="eye left" /><span className="eye right" /><span className="mouth" /></div>
+              <div className="hero-emblem" aria-hidden="true"><span /></div>
               <div className="console-copy"><span className="command">$ infoco init</span><strong>BUILD TOGETHER.</strong><p>LEARN · MAKE · SHIP · SHARE</p></div>
               <div className="console-meter"><span>CREATIVE ENERGY</span><div><i /></div><b>94%</b></div>
             </div>
@@ -40,7 +40,7 @@ export default function Home() {
 
         <section className="home-statement section-pad">
           <div className="section-index">01 / ABOUT THE CLUB</div>
-          <div className="statement-grid"><h2>项目驱动，<br /><em>持续学习。</em></h2><div><p>社课打基础，项目练协作，发布检验结果。</p><a className="text-link" href="/about">认识 InfoCo →</a></div></div>
+          <div className="statement-grid"><h2>项目驱动，<br /><em>持续学习。</em></h2><div><p>社课打基础，项目练协作，发布验结果。</p><a className="text-link" href="/about">认识 InfoCo →</a></div></div>
           <div className="stats-grid"><div><strong>04</strong><span>CORE TRACKS<br />核心方向</span></div><div><strong>05</strong><span>DIVISIONS<br />协作部门</span></div><div><strong>01</strong><span>GAME ONLINE<br />在线游戏</span></div><div><strong>∞</strong><span>IDEAS WELCOME<br />创意容量</span></div></div>
         </section>
 
