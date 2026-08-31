@@ -778,9 +778,10 @@ h1 { margin: 0; }
 .mode-protocol h3 { margin: 48px 0 10px; font-size: 20px; }
 .mode-protocol p { max-width: 300px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .featured-game { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(44px, 7vw, 100px); align-items: center; background: var(--ink); }
-.game-poster { position: relative; min-height: 560px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding: 30px; color: var(--on-acid); background: var(--acid-soft); border: 1px solid var(--line); border-radius: var(--radius-md); }
+.game-poster { position: relative; min-height: 560px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding: 30px; color: var(--on-acid); background: var(--acid-soft); border: 1px solid rgba(63, 185, 80, 0.25); border-radius: var(--radius-md); box-shadow: 16px 16px 0 rgba(63, 185, 80, 0.12), 0 24px 60px rgba(1, 4, 9, 0.4); }
 .poster-top { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid var(--line); font: 600 11px/1 var(--font-mono); color: var(--acid); }
-.poster-route { position: absolute; width: 64%; aspect-ratio: 1; left: 18%; top: 12%; border: 1px solid var(--line-strong); border-radius: 12px; }
+.poster-route { position: absolute; width: 66%; aspect-ratio: 1; left: 17%; top: 11%; border: 1px solid rgba(63, 185, 80, 0.30); border-radius: 12px; background: linear-gradient(90deg, transparent 49%, rgba(63, 185, 80, 0.14) 50%, transparent 51%), linear-gradient(transparent 49%, rgba(63, 185, 80, 0.14) 50%, transparent 51%); background-size: 25% 25%; transform: rotate(-6deg); }
+.poster-route::before { content: ''; position: absolute; width: 70%; height: 46%; left: 14%; top: 20%; border-left: 3px solid rgba(63, 185, 80, 0.55); border-bottom: 3px solid rgba(63, 185, 80, 0.55); transform: skewX(-32deg); }
 .poster-route i { position: absolute; width: 14px; height: 14px; border: 2px solid var(--acid); border-radius: 50%; background: var(--panel); }
 .poster-route i:nth-child(1) { left: 12%; top: 14%; }
 .poster-route i:nth-child(2) { left: 12%; top: 64%; }
