@@ -84,6 +84,9 @@ export function PageIntro({ index, label, title, copy, accent = 'acid' }: { inde
       <div className="page-intro-title">
         <div className="page-intro-meta"><span>{index}</span><span>{label}</span></div>
         <h1>{title}</h1>
+        <i className="page-intro-block" aria-hidden="true" />
+        <i className="page-intro-tile" aria-hidden="true" />
+        <i className="page-intro-dot" aria-hidden="true" />
       </div>
       <p>{copy}</p>
       <div className="page-intro-cross" aria-hidden="true">+</div>
