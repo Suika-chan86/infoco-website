@@ -80,7 +80,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
 export function PageIntro({ index, label, title, copy, accent = 'acid' }: { index: string; label: string; title: string; copy: string; accent?: 'acid' | 'blue' | 'orange' }) {
   return (
-    <section className={`page-intro ${accent}`}>
+    <section className={`page-intro ${accent} decor-${index}`}>
       <div className="page-intro-title">
         <div className="page-intro-meta"><span>{index}</span><span>{label}</span></div>
         <h1>{title}</h1>

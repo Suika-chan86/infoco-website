@@ -565,6 +565,30 @@ h1 { margin: 0; }
 .page-intro.blue .page-intro-block { background: rgba(88, 166, 255, 0.10); border-color: rgba(88, 166, 255, 0.30); }
 .page-intro.blue .page-intro-tile { border-color: rgba(88, 166, 255, 0.34); }
 .page-intro.blue .page-intro-dot { background: rgba(88, 166, 255, 0.85); }
+/* Per-page decoration variants (decor-01 = default, about) */
+.page-intro.decor-02 .page-intro-block { left: auto; right: -26px; bottom: -14px; transform: rotate(7deg); width: 210px; height: 80px; border-radius: 16px; }
+.page-intro.decor-02 .page-intro-tile { left: 10px; top: auto; bottom: -6px; transform: rotate(-10deg); }
+.page-intro.decor-02 .page-intro-dot { right: auto; left: -8px; top: 8px; }
+.page-intro.decor-02::before { right: auto; left: -150px; top: -160px; }
+.page-intro.decor-02::after { right: auto; left: -60px; top: -70px; }
+
+.page-intro.decor-03 .page-intro-block { left: auto; right: -30px; bottom: auto; top: -22px; transform: rotate(-8deg); width: 150px; height: 120px; border-radius: 24px; }
+.page-intro.decor-03 .page-intro-tile { left: auto; right: 12px; top: auto; bottom: -10px; transform: rotate(14deg); }
+.page-intro.decor-03 .page-intro-dot { right: auto; left: 24px; top: -18px; }
+.page-intro.decor-03::before { top: auto; bottom: -190px; }
+.page-intro.decor-03::after { top: auto; bottom: -120px; }
+
+.page-intro.decor-04 .page-intro-block { left: -16px; bottom: auto; top: -30px; transform: rotate(12deg); width: 120px; height: 120px; border-radius: 28px; }
+.page-intro.decor-04 .page-intro-tile { left: auto; right: 26px; top: auto; bottom: 20px; transform: rotate(-6deg); }
+.page-intro.decor-04 .page-intro-dot { right: auto; left: 34px; bottom: -8px; top: auto; }
+.page-intro.decor-04::before { width: 340px; height: 340px; right: -100px; top: -220px; }
+.page-intro.decor-04::after { width: 200px; height: 200px; right: -30px; top: -150px; }
+
+.page-intro.decor-05 .page-intro-block { left: -12px; bottom: -20px; transform: rotate(-4deg); width: 230px; height: 64px; border-radius: 14px; }
+.page-intro.decor-05 .page-intro-tile { left: auto; right: -6px; top: -26px; transform: rotate(18deg); }
+.page-intro.decor-05 .page-intro-dot { right: auto; left: 8px; top: -22px; }
+.page-intro.decor-05::before { right: auto; left: -140px; top: auto; bottom: -170px; }
+.page-intro.decor-05::after { right: auto; left: -60px; top: auto; bottom: -100px; }
 
 /* ==========================================================================
    About
