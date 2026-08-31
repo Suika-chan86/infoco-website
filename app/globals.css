@@ -482,6 +482,31 @@ h1 { margin: 0; }
   padding: 112px clamp(22px, 6vw, 96px) 72px;
   background: var(--ink);
 }
+.page-intro::before,
+.page-intro::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.page-intro::before {
+  width: 460px;
+  height: 460px;
+  right: -150px;
+  top: -160px;
+  border: 2px solid rgba(63, 185, 80, 0.22);
+}
+.page-intro::after {
+  width: 280px;
+  height: 280px;
+  right: -60px;
+  top: -70px;
+  border: 1px solid rgba(63, 185, 80, 0.16);
+}
+.page-intro.orange::before { border-color: rgba(210, 153, 34, 0.26); }
+.page-intro.orange::after { border-color: rgba(210, 153, 34, 0.16); }
+.page-intro.blue::before { border-color: rgba(88, 166, 255, 0.26); }
+.page-intro.blue::after { border-color: rgba(88, 166, 255, 0.16); }
 .page-intro-title, .page-intro-meta, .page-intro h1, .page-intro > p, .page-intro-cross { z-index: 1; }
 .page-intro-title { position: relative; align-self: end; }
 .page-intro-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; color: var(--acid); font: 700 15px/1.1 var(--font-mono); letter-spacing: .04em; }
