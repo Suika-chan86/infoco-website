@@ -51,7 +51,7 @@ export function ShareButton({ label = '复制页面链接' }: { label?: string }
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1800);
   }
-  return <button className="share-button" onClick={copy}>{copied ? '已复制 ✓' : `${label} ↗`}</button>;
+  return <button className="share-button" onClick={copy}>{copied ? '已复制 ✓' : `${label} ↗︎`}</button>;
 }
 
 const faqJoin: Array<[string, string]> = [
